@@ -73,8 +73,8 @@ services:
         target: /usr/share/logstash/pipeline/logstash.conf
       - source: logstash.yml
         target: /usr/share/logstash/config/logstash.yml
-      - source: logstash.key
-        target: /usr/share/logstash/config/logstash.key
+      - source: logstash.keystore
+        target: /usr/share/logstash/config/logstash.keystore
       - source: ca.crt
         target: /usr/share/logstash/config/certs/ca/ca.crt
     networks: ['stack']
@@ -93,8 +93,8 @@ services:
     secrets:
       - source: auditbeat.yml
         target: /usr/share/auditbeat/auditbeat.yml
-      - source: auditbeat.key
-        target: /usr/share/auditbeat/auditbeat.key
+      - source: auditbeat.keystore
+        target: /usr/share/auditbeat/auditbeat.keystore
       - source: ca.crt
         target: /usr/share/auditbeat/certs/ca/ca.crt
     # Auditbeat must run in the main process namespace.
@@ -249,7 +249,7 @@ secrets:
   logstash.yml:
     file: ./config/logstash/logstash.yml
   logstash.keystore:
-    file: ./config/logstash/logstash.keystore
+    file: ./config/logstash/logstash.key
   logstash.conf:
     file: ./config/logstash/pipeline/logstash.conf
   elasticsearch.yml:
@@ -265,7 +265,7 @@ secrets:
   kibana.yml:
     file: ./config/kibana/kibana.yml
   kibana.keystore:
-    file: ./config/kibana/kibana.keystore
+    file: ./config/kibana/kibana.key
   kibana.key:
     file: ./config/kibana/kibana.key
   kibana.crt:
