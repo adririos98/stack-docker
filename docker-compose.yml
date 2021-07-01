@@ -73,8 +73,8 @@ services:
         target: /usr/share/logstash/pipeline/logstash.conf
       - source: logstash.yml
         target: /usr/share/logstash/config/logstash.yml
-      - source: logstash.keystore
-        target: /usr/share/logstash/config/logstash.keystore
+      - source: logstash.key
+        target: /usr/share/logstash/config/logstash.key
       - source: ca.crt
         target: /usr/share/logstash/config/certs/ca/ca.crt
     networks: ['stack']
@@ -93,8 +93,8 @@ services:
     secrets:
       - source: auditbeat.yml
         target: /usr/share/auditbeat/auditbeat.yml
-      - source: auditbeat.keystore
-        target: /usr/share/auditbeat/auditbeat.keystore
+      - source: auditbeat.key
+        target: /usr/share/auditbeat/auditbeat.key
       - source: ca.crt
         target: /usr/share/auditbeat/certs/ca/ca.crt
     # Auditbeat must run in the main process namespace.
