@@ -39,7 +39,7 @@ if [[ -d /usr/share/elasticsearch/bin/x-pack ]]; then
         fi
         echo "Install unzip if needed..."
         if ! command -v unzip &>/dev/null; then
-           yum -qy install unzip
+          yum -qy install unzip
         fi
         echo "Unzip ca files..."
         unzip /config/ssl/docker-cluster-ca.zip -d /config/ssl
