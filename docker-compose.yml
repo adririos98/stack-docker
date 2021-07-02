@@ -273,24 +273,24 @@ secrets:
   auditbeat.yml:
     file: ./config/auditbeat/auditbeat.yml
   auditbeat.keystore:
-    file: ./config/auditbeat/auditbeat.key
+    file: ./config/auditbeat/auditbeat.keystore
   filebeat.yml:
     file: ./config/filebeat/filebeat.yml
   filebeat.keystore:
-    file: ./config/filebeat/filebeat.key
+    file: ./config/filebeat/filebeat.keystore
   heartbeat.yml:
     file: ./config/heartbeat/heartbeat.yml
   heartbeat.keystore:
-    file: ./config/heartbeat/heartbeat.key
+    file: ./config/heartbeat/heartbeat.keystore
   metricbeat.yml:
     file: ./config/metricbeat/metricbeat.yml
   metricbeat.keystore:
-    file: ./config/metricbeat/metricbeat.key
+    file: ./config/metricbeat/metricbeat.keystore
   packetbeat.yml:
     file: ./config/packetbeat/packetbeat.yml
   packetbeat.keystore:
-    file: ./config/packetbeat/packetbeat.key
+    file: ./config/packetbeat/packetbeat.keystore
   apm-server.yml:
     file: ./config/apm-server/apm-server.yml
   apm-server.keystore:
-    file: ./config/apm-server/apm-server.key
+    file: ./config/apm-server/apm-server.keystore
