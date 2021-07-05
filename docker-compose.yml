@@ -34,7 +34,7 @@ services:
     ports: ['9200:9200']
     networks: ['stack']
     volumes:
-      - '/opt/es_data/stack-docker_es_data:/usr/share/elasticsearch/data'
+      - '/opt/es_data/stack-docker_es_data/_data:/usr/share/elasticsearch/data'
       - './scripts/setup-users.sh:/usr/local/bin/setup-users.sh:ro'
     healthcheck:
       test: curl --cacert /usr/share/elasticsearch/config/certs/ca/ca.crt -s https://localhost:9200 >/dev/null; if [[ $$? == 52 ]]; then echo 0; else echo 1; fi
