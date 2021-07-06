@@ -49,7 +49,7 @@ RAM:
 ```
 sysctl -w vm.max_map_count=262144
 ```
-To make it persistent, you can add this line:
+* To make it persistent, you can add this line:
 ```
 vm.max_map_count=262144
 in your /etc/sysctl.conf and run
