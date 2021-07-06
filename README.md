@@ -49,6 +49,15 @@ RAM:
 ```
 sysctl -w vm.max_map_count=262144
 ```
+```
+To make it persistent, you can add this line:
+
+vm.max_map_count=262144
+in your /etc/sysctl.conf and run
+
+$ sudo sysctl -p
+to reload configuration with new value
+```
 By default, the amount of Virtual Memory [is not enough](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 
 
